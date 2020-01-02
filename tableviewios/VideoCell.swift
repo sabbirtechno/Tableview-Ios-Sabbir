@@ -16,6 +16,8 @@ class VideoCell: UITableViewCell {
     @IBOutlet weak var videoTittleLabel: UILabel!
     
     
+    
+    
     func setVideo(video: Video) {
         videoImageView.image = video.image
         videoTittleLabel.text = video.title

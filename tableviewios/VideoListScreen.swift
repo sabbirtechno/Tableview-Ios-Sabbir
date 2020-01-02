@@ -9,7 +9,8 @@
 import UIKit
 
 class VideoListScreen: UIViewController {
-
+    
+    var tempVideo:Video! = nil
     var videos: [Video] = []
     
     override func viewDidLoad() {
@@ -22,16 +23,17 @@ class VideoListScreen: UIViewController {
     
    // tableView.delegate = self
     //tableView.dataSource = self
+    
+    
 
     func createArray() -> [Video] {
-        
         
         var tempVideos: [Video] = []
         
         //let video1 = Video(image: (UIImage(named:"ImageName") ?? nil) ?? default value, title: "first")
         
         let video1 = Video(image: UIImage(named:"one")!, title: "Sabbir TableView Demo")
-         let video2 = Video(image: UIImage(named:"two")!, title: "My Development")
+        let video2 = Video(image: UIImage(named:"two")!, title: "My Development")
         let video3 = Video(image: UIImage(named:"three")!, title: "Practise makes a man perfect")
         let video4 = Video(image: UIImage(named:"four")!, title: "What are you doing")
         let video5 = Video(image: UIImage(named:"five")!, title: "Lets do this")
@@ -52,6 +54,7 @@ class VideoListScreen: UIViewController {
     
     extension VideoListScreen: UITableViewDataSource, UITableViewDelegate {
         
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return videos.count
     }
@@ -62,12 +65,28 @@ class VideoListScreen: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier:"VideoCell") as! VideoCell
     
-    
-       
         cell.setVideo(video: video)
         return cell
     }
-    
-  }
+        //code for Showing in log
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           // var rowNo = indexPath.row;
+            
+             print(videos[indexPath.row].title)
+            tempVideo = videos[indexPath.row]
+            performSegue(withIdentifier: "showDetail", sender: self)
+        }
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let destination = segue.destination as? DetailViewController {
+                destination.video = tempVideo
+            }
+        }
+}
+
+
+
+
 
 

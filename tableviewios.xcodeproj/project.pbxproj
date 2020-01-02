@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		924646A723BE058400DF2841 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924646A623BE058400DF2841 /* DetailViewController.swift */; };
 		9249C6F923BC9F4B0042D7EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9249C6F823BC9F4B0042D7EF /* AppDelegate.swift */; };
 		9249C6FE23BC9F4B0042D7EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9249C6FC23BC9F4B0042D7EF /* Main.storyboard */; };
 		9249C70023BC9F530042D7EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9249C6FF23BC9F530042D7EF /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		924646A623BE058400DF2841 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9249C6F523BC9F4B0042D7EF /* tableviewios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableviewios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9249C6F823BC9F4B0042D7EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9249C6FD23BC9F4B0042D7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				9249C71823BCA0380042D7EF /* VideoListScreen.swift */,
 				9249C71A23BCA57A0042D7EF /* VideoCell.swift */,
 				9249C71C23BCAD590042D7EF /* Video.swift */,
+				924646A623BE058400DF2841 /* DetailViewController.swift */,
 				9249C6FC23BC9F4B0042D7EF /* Main.storyboard */,
 				9249C6FF23BC9F530042D7EF /* Assets.xcassets */,
 				9249C70123BC9F530042D7EF /* LaunchScreen.storyboard */,
@@ -205,6 +208,7 @@
 			files = (
 				9249C6F923BC9F4B0042D7EF /* AppDelegate.swift in Sources */,
 				9249C71D23BCAD590042D7EF /* Video.swift in Sources */,
+				924646A723BE058400DF2841 /* DetailViewController.swift in Sources */,
 				9249C71923BCA0380042D7EF /* VideoListScreen.swift in Sources */,
 				9249C71B23BCA57A0042D7EF /* VideoCell.swift in Sources */,
 			);
